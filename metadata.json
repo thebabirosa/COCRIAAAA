@@ -1,0 +1,6 @@
+{
+  "name": "COCRIA — O Código da Cocriação | Mariana Moreira",
+  "description": "Landing page oficial do treinamento COCRIA por Mariana Moreira. Destrave as 5 travas invisíveis do dinheiro e ative sua mente próspera em 21 dias.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

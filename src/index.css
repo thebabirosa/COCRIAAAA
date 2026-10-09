@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-fraunces: 'Fraunces', Georgia, serif;
+    --font-dmsans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html {
+    font-family: var(--font-dmsans);
+    scroll-behavior: smooth;
+  }
+}
+
+.font-fraunces {
+  font-family: var(--font-fraunces);
+}
+
+.font-dmsans {
+  font-family: var(--font-dmsans);
+}
+
+/* Gradient gold text utility */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #E9D3A0 0%, #C9A35A 50%, #B8862B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gold-light-gradient {
+  background: linear-gradient(135deg, #FFF6E5 0%, #E9D3A0 50%, #C9A35A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Shimmer pass for primary CTAs */
+@keyframes shimmer-pass {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  30% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-shimmer-sweep {
+  animation: shimmer-pass 4s ease-in-out infinite;
+}
+
+/* Subtle horizon line with glow point */
+.gold-horizon-line {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(201, 163, 90, 0.4) 30%, rgba(233, 211, 160, 0.8) 50%, rgba(201, 163, 90, 0.4) 70%, transparent 100%);
+}
+
+.gold-horizon-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: #E9D3A0;
+  box-shadow: 0 0 10px 2px rgba(233, 211, 160, 0.8);
+}
+
+/* Hide scrollbar for clean horizontal snap galleries */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
